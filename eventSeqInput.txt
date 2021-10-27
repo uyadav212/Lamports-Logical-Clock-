@@ -1,0 +1,20 @@
+begin process p1
+print abc1
+recv p3 m3
+send p2 m1
+print abc2
+end process p1
+
+begin process p2
+print pqr1
+recv p1 m1
+send p3 m2
+print pqr2
+end process p2
+
+begin process p3
+print xyz1
+recv p2 m2
+send p1 m3
+print xyz2
+end process p3
